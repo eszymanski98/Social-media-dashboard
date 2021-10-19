@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="switcher.js"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard__container">
+      <div class="dashboard__top">
+        <div class="dashboard__top__left">
+          <div class="dashboard__top__main__text">Social Media Dashboard</div>
+          <br />
+          <div class="dashboard__top__total_followers">
+            Total Followers: 23,004
+          </div>
+        </div>
+        <div class="dashboard__top__right">
+          <div class="dashboard__top__darkmode">Dark Mode</div>
+          <label class="switch">
+            <input
+              class="switcher"
+              type="checkbox"
+              id="checkbox"
+              onchange="switchMode(this)"
+              ;
+            />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="dasbhoard__top__tiles__container">
+        <div class="dashboard__top__tile">
+          <div class="border__fb"></div>
+          <div class="dashboard__top__tile__profile">
+            <img src="images/icon-facebook.svg" />
+            <div class="dashboard__top__tile__profile__text">@nathanf</div>
+          </div>
+          <div class="dashboard__top__tile__profile__number">1987</div>
+          <div class="dashboard__top__tile__profile__textbelow">Followers</div>
+          <div class="dashboard__top__tile__gain">
+            <div class="arrow__up"></div>
+            12 Today
+          </div>
+        </div>
+        <div class="dashboard__top__tile">
+          <div class="border__tt"></div>
+          <div class="dashboard__top__tile__profile">
+            <img src="images/icon-twitter.svg" />
+            <div class="dashboard__top__tile__profile__text">@nathanf</div>
+          </div>
+          <div class="dashboard__top__tile__profile__number">1044</div>
+          <div class="dashboard__top__tile__profile__textbelow">Followers</div>
+          <div class="dashboard__top__tile__gain">
+            <div class="arrow__up"></div>
+            99 Today
+          </div>
+        </div>
+        <div class="dashboard__top__tile">
+          <div class="border__ig"></div>
+          <div class="dashboard__top__tile__profile">
+            <img src="images/icon-instagram.svg" />
+            <div class="dashboard__top__tile__profile__text">@realnathanf</div>
+          </div>
+          <div class="dashboard__top__tile__profile__number">11k</div>
+          <div class="dashboard__top__tile__profile__textbelow">Followers</div>
+          <div class="dashboard__top__tile__gain">
+            <div class="arrow__up"></div>
+            1099 Today
+          </div>
+        </div>
+        <div class="dashboard__top__tile">
+          <div class="border__yt"></div>
+          <div class="dashboard__top__tile__profile">
+            <img src="images/icon-youtube.svg" />
+            <div class="dashboard__top__tile__profile__text">Nathan F.</div>
+          </div>
+          <div class="dashboard__top__tile__profile__number">8239</div>
+          <div class="dashboard__top__tile__profile__textbelow">
+            Subscribers
+          </div>
+          <div class="dashboard__top__tile__degain">
+            <div class="arrow__down"></div>
+            144 Today
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard__bottom">
+        <div class="dashboard__bottom__text">Overview - Today</div>
+      </div>
+      <div class="dashboard_bottom__tiles__container">
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Page Views</div>
+            <img src="images/icon-facebook.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">87</div>
+            <div class="dashboard__bottom__tile__gain">
+              <div class="arrow__up"></div>
+              3%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Likes</div>
+            <img src="images/icon-facebook.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">52</div>
+            <div class="dashboard__bottom__tile__degain">
+              <div class="arrow__down"></div>
+              2%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Likes</div>
+            <img src="images/icon-instagram.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">5462</div>
+            <div class="dashboard__bottom__tile__gain">
+              <div class="arrow__up"></div>
+              2257%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Profile Views</div>
+            <img src="images/icon-instagram.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">52k</div>
+            <div class="dashboard__bottom__tile__gain">
+              <div class="arrow__up"></div>
+              1375%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Retweets</div>
+            <img src="images/icon-twitter.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">117</div>
+            <div class="dashboard__bottom__tile__gain">
+              <div class="arrow__up"></div>
+              303%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Likes</div>
+            <img src="images/icon-twitter.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">507</div>
+            <div class="dashboard__bottom__tile__gain">
+              <div class="arrow__up"></div>
+              553%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Likes</div>
+            <img src="images/icon-youtube.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">107</div>
+            <div class="dashboard__bottom__tile__degain">
+              <div class="arrow__down"></div>
+              19%
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__bottom__tile">
+          <div class="dashboard__bottom__tile_top">
+            <div class="dashboard__bottom__tile__text">Total Views</div>
+            <img src="images/icon-youtube.svg" />
+          </div>
+          <div class="dashboard__bottom__tile_bot">
+            <div class="dashboard__bottom__tile__number">1407</div>
+            <div class="dashboard__bottom__tile__degain">
+              <div class="arrow__down"></div>
+              12%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/eszymanski98">Ernest Szymański</a>.
+    </div>
+  </body>
+</html>
